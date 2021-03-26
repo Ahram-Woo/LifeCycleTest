@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: post-start-hook
+  name: random-generator
 spec:
   replicas: 2
   strategy:
@@ -12,11 +12,11 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: post-start-hook
+      app: random-generator
   template:
     metadata:
       labels:
-        app: post-start-hook
+        app: random-generator
     spec:
       containers:
       - image: k8spatterns/random-generator:1.0
