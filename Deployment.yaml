@@ -12,15 +12,15 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: random-generator
+      app: post-start-hook
   template:
     metadata:
       labels:
-        app: random-generator
+        app: post-start-hook
     spec:
       containers:
       - image: k8spatterns/random-generator:1.0
-        name: post-start-hook
+        name: random-generator
         ports:
         - containerPort: 8080
           protocol: TCP
