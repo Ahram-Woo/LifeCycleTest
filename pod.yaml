@@ -1,17 +1,16 @@
-
-apiVersion: apps/v1
-kind: pod
+apiVersion: v1
+kind: Pod
 metadata:
   name: post-start-hook
 spec:
-      containers:
-      - image: k8spatterns/random-generator:1.0
-        name: random-generator
-        lifecycle:
-          postStart:
-            exec:
-              command:
-              - sh
-              - -C
-              - sleep 30 && echo ”Wake up! ” > /tmp/postStart_done
+  containers:
+  - image: k8spatterns/random-generator:1.0
+    name: random-generator
+    lifecycle:
+      postStart:
+        exec:
+          command:
+          - sh
+          - -C
+          - sleep 30 && echo ”Wake up! ” > /tmp/postStart_done
        
