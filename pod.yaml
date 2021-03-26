@@ -11,6 +11,6 @@ spec:
         exec:
           command:
           - sh
-          - -C
+          - -c
           - sleep 30 && echo ”Wake up! ” > /tmp/postStart_done
        
