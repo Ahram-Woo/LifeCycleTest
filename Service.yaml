@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lifecycle-demo
+  name: post-start-hook
 spec:
   selector:
-    app: lifecycle-demo
+    app: post-start-hook
   ports:
   - port: 8080
     protocol: TCP
